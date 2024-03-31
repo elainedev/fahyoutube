@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  background: black;
+}
+.container {
+  width: 1280px;
+  height: 1280px;
+  /* width: 800px;
+  height: 800px; */
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.award {
+  cursor: pointer;
+  position: absolute;
+  left: 40%;
+  top: 160px;
+  background: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 336px;
+  height: 450px;
+  border-radius: 2px;
+  padding-top: 75px;
+  position: relative;
+  animation: descend 5s forwards, shake 2.2s linear 5.2s infinite;
+
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #dab823 0%,
+      #eaaa28 5%,
+      #bc9133 25%,
+      #8a6e2f 40%,
+      transparent 90%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #fbdd90 0%,
+      #f8d983 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  filter: brightness(105%);
+
+  box-shadow: 0 0 80px 30px rgba(255, 255, 255, 0.2),
+    20px 0 80px 30px rgba(255, 255, 0, 0.1),
+    -20px 0 80px rgba(255, 255, 255, 0.3),
+    20px 0 350px 30px rgba(255, 255, 0, 0.1),
+    -20px 0 350px rgba(255, 255, 255, 0.2),
+    0 0 70px 30px rgba(255, 255, 255, 0.1),
+    -10px 0 80px 30px rgba(255, 255, 0, 0.1),
+    10px 0 80px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes descend {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+.sheen {
+  background-color: rgba(255, 198, 91, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.youtube-logo {
+  width: 168px;
+  height: 130px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 15%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  filter: brightness(70%);
+  box-shadow: inset -5px 10px 5px #2e2207;
+  box-shadow: inset -3px 6px 2px 1px #2e2207;
+
+  &.small {
+    background: white;
+    width: 43px;
+    height: 30px;
+    filter: brightness(1);
+    border-radius: 6px;
+    opacity: 0.95;
+    box-shadow: none;
+  }
+}
+
+.play-btn {
+  width: 0;
+  height: 0;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+  border-left: 37px solid #f0cd2f;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  position: relative;
+  left: 2px;
+
+  &.small-btn {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #9f7928;
+  }
+}
+
+.text-box {
+  text-align: center;
+  color: white;
+  margin-top: 70px;
+  opacity: 0.8;
+  letter-spacing: -0.5px;
+}
+
+p {
+  margin: 0;
+  font-weight: 100;
+}
+
+.presented-to {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.recipient {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.reason {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.footer {
+  display: flex;
+  margin: 25px 0 35px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.yt-brand {
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-inline-start: 5px;
+}
